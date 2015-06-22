@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" value="notranslate" />
+    <title>CodePen - Pure CSS birthday cake</title>
+    <style type="text/css">
+        html {
+            font-family: sans-serif;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%
+        }
+        
+        body {
+            margin: 0
+        }
+        
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        menu,
+        nav,
+        section,
+        summary {
+            display: block
+        }
+        
+        audio,
+        canvas,
+        progress,
+        video {
+            display: inline-block;
+            vertical-align: baseline
+        }
+        
+        audio:not([controls]) {
+            display: none;
+            height: 0
+        }
+        
+        [hidden],
+        template {
+            display: none
+        }
+        
+        a {
+            background-color: transparent
+        }
+        
+        a:active,
+        a:hover {
+            outline: 0
+        }
+        
+        abbr[title] {
+            border-bottom: 1px dotted
+        }
+        
+        b,
+        strong {
+            font-weight: bold
+        }
+        
+        dfn {
+            font-style: italic
+        }
+        
+        h1 {
+            font-size: 2em;
+            margin: 0.67em 0
+        }
+        
+        mark {
+            background: #ff0;
+            color: #000
+        }
+        
+        small {
+            font-size: 80%
+        }
+        
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline
+        }
+        
+        sup {
+            top: -0.5em
+        }
+        
+        sub {
+            bottom: -0.25em
+        }
+        
+        img {
+            border: 0
+        }
+        
+        svg:not(:root) {
+            overflow: hidden
+        }
+        
+        figure {
+            margin: 1em 40px
+        }
+        
+        hr {
+            -moz-box-sizing: content-box;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+            height: 0
+        }
+        
+        pre {
+            overflow: auto
+        }
+        
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: monospace, monospace;
+            font-size: 1em
+        }
+        
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            color: inherit;
+            font: inherit;
+            margin: 0
+        }
+        
+        button {
+            overflow: visible
+        }
+        
+        button,
+        select {
+            text-transform: none
+        }
+        
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+            -webkit-appearance: button;
+            cursor: pointer
+        }
+        
+        button[disabled],
+        html input[disabled] {
+            cursor: default
+        }
+        
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            border: 0;
+            padding: 0
+        }
+        
+        input {
+            line-height: normal
+        }
+        
+        input[type="checkbox"],
+        input[type="radio"] {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0
+        }
+        
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            height: auto
+        }
+        
+        input[type="search"] {
+            -webkit-appearance: textfield;
+            -moz-box-sizing: content-box;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box
+        }
+        
+        input[type="search"]::-webkit-search-cancel-button,
+        input[type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+        
+        fieldset {
+            border: 1px solid #c0c0c0;
+            margin: 0 2px;
+            padding: 0.35em 0.625em 0.75em
+        }
+        
+        legend {
+            border: 0;
+            padding: 0
+        }
+        
+        textarea {
+            overflow: auto
+        }
+        
+        optgroup {
+            font-weight: bold
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+        
+        td,
+        th {
+            padding: 0
+        }
+        
+        @-webkit-keyframes flames {
+            0% {
+                height: 2.2em;
+                -webkit-transform: rotate(0.5deg);
+                transform: rotate(0.5deg);
+                opacity: 0.8;
+            }
+            100% {
+                height: 2.5em;
+                -webkit-transform: rotate(-0.5deg);
+                transform: rotate(-0.5deg);
+                border-radius: 50% / 30%;
+                border-top-right-radius: 50% 60%;
+                border-top-left-radius: 50% 60%;
+                opacity: 1;
+            }
+        }
+        
+        @keyframes flames {
+            0% {
+                height: 2.2em;
+                -webkit-transform: rotate(0.5deg);
+                transform: rotate(0.5deg);
+                opacity: 0.8;
+            }
+            100% {
+                height: 2.5em;
+                -webkit-transform: rotate(-0.5deg);
+                transform: rotate(-0.5deg);
+                border-radius: 50% / 30%;
+                border-top-right-radius: 50% 60%;
+                border-top-left-radius: 50% 60%;
+                opacity: 1;
+            }
+        }
+        
+        @-webkit-keyframes candles {
+            0% {
+                height: 10em;
+                border-radius: 50% / 5%;
+            }
+            100% {
+                height: 2em;
+                border-radius: 50% / 25%;
+            }
+        }
+        
+        @keyframes candles {
+            0% {
+                height: 10em;
+                border-radius: 50% / 5%;
+            }
+            100% {
+                height: 2em;
+                border-radius: 50% / 25%;
+            }
+        }
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #ffdfe5;
+            color: #864313;
+            font-size: 12px;
+        }
+        
+        p {
+            text-align: center;
+            padding: 2em;
+            font-size: 16px;
+        }
+        
+        a {
+            color: inherit;
+            background: #ffffcc;
+            text-decoration: none;
+        }
+        
+        .title {
+            text-align: center;
+            font-size: 3em;
+        }
+        
+        .cake {
+            height: 30em;
+            width: 30em;
+            margin: 10em auto 0;
+            position: relative;
+            border-radius: 100% / 50%;
+            background: #7b3d11;
+            border-bottom: 0.25em solid #2d1606;
+        }
+        
+        .cake::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 15em;
+            border-radius: 50%;
+            background: #7b3d11;
+            border-bottom: 0.5em solid #221105;
+            z-index: 10;
+        }
+        
+        .cake::after {
+            content: '';
+            position: absolute;
+            top: 5em;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 15em;
+            border-radius: 50%;
+            border-top-right-radius: 25%;
+            border-top-left-radius: 25%;
+            background: #864313;
+            box-shadow: 0 5em 0 #ffffcc, 0 10em 0 #864313;
+        }
+        
+        .candles {
+            z-index: 20;
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            height: 10em;
+            width: 2.5em;
+            position: absolute;
+            bottom: 22.5em;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            border-radius: 50% / 5%;
+            -webkit-animation: candles 10s 2s 2 alternate;
+            animation: candles 10s 2s 2 alternate;
+            background: #ffcc00;
+            box-shadow: -3.5em 5em 0 0 #77DD77, 3.5em 5em 0 0 #FF6961, -7em -2.5em 0 -3px #FFB347, 7em -2.5em 0 -3px #779ECB, -10.5em 2em 0 -1px #B19CD9, 10.5em 2em 0 -1px #A5D3CA;
+        }
+        
+        .candles::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 10px;
+            border-radius: 50%;
+            background: #cca300;
+            box-shadow: -3.5em 5em 0 0 #4ed34e, 3.5em 5em 0 0 #ff392e, -7em -2.5em 0 -3px #ff9e14, 7em -2.5em 0 -3px #5284bd, -10.5em 2em 0 -1px #9477cb, 10.5em 2em 0 -1px #83c2b6;
+        }
+        
+        .candles::after {
+            content: '';
+            position: absolute;
+            top: -2em;
+            right: 0;
+            left: 0;
+            margin: auto;
+            border-radius: 50% / 40%;
+            border-top-right-radius: 50% 60%;
+            border-top-left-radius: 50% 60%;
+            background: #E29822;
+            height: 2.5em;
+            width: 1.5em;
+            -webkit-animation: flames 0.75s infinite alternate;
+            animation: flames 0.75s infinite alternate;
+            box-shadow: 0 0 0 1px #e8ad4f, -3.5em 5em 1px 0 #E29822, 3.5em 5em 1px 0 #E29822, -7em -2.5em 1px 0 #E29822, 7em -2.5em 1px 0 #E29822, -10.5em 2em 1px 0 #E29822, 10.5em 2em 1px 0 #E29822;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        window.console = window.console || function (t) {};
+        window.open = function () {
+            console.log("window.open is disabled.");
+        };
+        window.print = function () {
+            console.log("window.print is disabled.");
+        };
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1 class="title">Happy birthday!</h1>
+    <div class="cake">
+        <div class="candles"></div>
+    </div>
+
+    <!--  Pure CSS cake made with pride by Jaime Caballero -->
+    <script type="text/javascript">
+        if (document.location.search.match(/type=embed/gi)) window.parent.postMessage("resize", "*");
+
+    </script>
+</body>
+
+</html>
