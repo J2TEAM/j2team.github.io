@@ -27,9 +27,9 @@
 <meta property="og:image" content="http://img.hayhaytv.com/film/09032015/crop/fifty-shades-of-grey-film-t_720x1080_84001425892086.jpg"/>
 <meta http-equiv="Content-Language" content="vi"/>
 <meta name="Language" content="vietnamese"/>
-<script type="text/javascript" src="/980BDE9623A140FE92346E62C373FBAE/946B73D7-ADEB-5942-97A8-EF2F4A125099/main.js" charset="UTF-8"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,o){t&&t(e,n,o),o||(o={});for(var a=i(e),s=a.length,c=o[r]||(o[r]={}),f=0;s>f;f++)a[f].apply(c,n);return c}function o(t,e){s[t]=i(t).concat(e)}function i(t){return s[t]||[]}function a(){return n(e)}var s={};return{on:o,emit:e,create:a,listeners:i,_events:s}}var r="nr@context";e.exports=n()},{}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:17,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o);if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var a=document;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&n(a);for(var s=XMLHttpRequest.prototype;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=i(e,"fn-",null,e.name||"anonymous"):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:17,2:18,ee:"QJf3ax"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:18,2:17,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:18,2:17,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:18,2:17,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",r)}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:18,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(1),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(2);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",e)}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:11,2:14,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],14:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],17:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],18:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper";e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,f,u;try{i=this,n=o(arguments),f=r&&r(n,i)||{}}catch(d){c([d,"",[n,i,a],f])}s(e+"start",[n,i,a],f);try{return u=t.apply(i,n)}catch(p){throw s(e+"err",[n,i,p],f),p}finally{s(e+"end",[n,i,u],f)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,nrWrapper)}function a(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function s(e,n,r){try{t.emit(e,n,r)}catch(o){c([o,e,n,r])}}function c(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=a,e.flag=i,e}},{1:17,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"11254402c1",applicationID:"9551004",sa:1,agent:"js-agent.newrelic.com/nr-460.min.js"}</script><script type="text/javascript">
+<script type="text/javascript" src="/980BDE9623A140FE92346E62C373FBAE/801EA8CF-02BF-124D-94EF-630B6DF508AB/main.js" charset="UTF-8"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,o){t&&t(e,n,o),o||(o={});for(var a=i(e),s=a.length,c=o[r]||(o[r]={}),f=0;s>f;f++)a[f].apply(c,n);return c}function o(t,e){s[t]=i(t).concat(e)}function i(t){return s[t]||[]}function a(){return n(e)}var s={};return{on:o,emit:e,create:a,listeners:i,_events:s}}var r="nr@context";e.exports=n()},{}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:17,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o);if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var a=document;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&n(a);for(var s=XMLHttpRequest.prototype;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=i(e,"fn-",null,e.name||"anonymous"):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:17,2:18,ee:"QJf3ax"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:18,2:17,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:18,2:17,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:18,2:17,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",r)}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:18,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(1),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(2);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",e)}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:11,2:14,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],14:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],17:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],18:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper";e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,f,u;try{i=this,n=o(arguments),f=r&&r(n,i)||{}}catch(d){c([d,"",[n,i,a],f])}s(e+"start",[n,i,a],f);try{return u=t.apply(i,n)}catch(p){throw s(e+"err",[n,i,p],f),p}finally{s(e+"end",[n,i,u],f)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,nrWrapper)}function a(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function s(e,n,r){try{t.emit(e,n,r)}catch(o){c([o,e,n,r])}}function c(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=a,e.flag=i,e}},{1:17,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"11254402c1",applicationID:"9551004",sa:1,agent:"js-agent.newrelic.com/nr-460.min.js"}</script><script type="text/javascript">
 //<![CDATA[
-try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:1436451071,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"504d4fcceb538bb3d707838ae0162e03",petok:"3f55d53c488318abaea1cf91f6338801a47386e1-1436456306-1800",zone:"hayhaytv.vn",rocket:"0",apps:{"trumpet":{"message":null}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=7e13c32551/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:1436451071,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"504d4fcceb538bb3d707838ae0162e03",petok:"a2cc114d62d1a4ef70c9e7dd4d570861fb69ff9e-1436455804-1800",zone:"hayhaytv.vn",rocket:"0",apps:{"trumpet":{"message":null}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=7e13c32551/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
 //]]>
 </script>
 <link rel="shortcut icon" href="http://static.hayhaytv.vn/layout/images/favicon.ico"/>
@@ -54,8 +54,8 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:1436451071,byc:0,owlid
         var http_static = 'http://static.hayhaytv.vn/';
         var APPID = '451494911564313';
         var links_google = 'https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Fwww.hayhaytv.vn%2Findex.php&client_id=1072878399715-180d1lcf46k175n2emba67onb3kuo6td.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.login+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=offline&approval_prompt=force';
-        var USERNAME = 'juno_okyo';
-        var token_value = '9e697d0e3d21eab3d6f97745605a64de';
+        var USERNAME = 'tanmkqnh';
+        var token_value = 'cc9ea88959e58208321c49fdb47db6b5';
 		
 		//var socket = io.connect("http://118.69.202.7");
 
@@ -82,7 +82,7 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:1436451071,byc:0,owlid
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-37197632-1', { 'userId': 404463 });  // Replace with your property ID.
+ga('create', 'UA-37197632-1', { 'userId': 40946 });  // Replace with your property ID.
 ga('send', 'pageview');
 
 </script>
@@ -232,7 +232,8 @@ try{(function(a){var b="http://",c="www.hayhaytv.vn",d="/cdn-cgi/cl/",e="img.gif
 <a rel="nofollow" class="skype_chat_a" href="skype:hayhaytv.vn?chat">&nbsp;</a>
 <a rel="nofollow" class="yahoo_chat_a" href="ymsgr:sendim?hayhaytv3">&nbsp;</a>
 <span>Xin chào:</span> <a class="login_txt" href="http://www.hayhaytv.vn/user/profile">
-juno_okyo</a>
+<img width="20" height="21" src="http://static.hayhaytv.vn/layout/images/vip-ico.png" class="ico-vip">
+tanmkqnh</a>
 <a href="http://www.hayhaytv.vn/user/profile_message" class="profile_notification relative">
 <img src="http://static.hayhaytv.vn/layout/images/new_icon/mail_icon.png" style="float: left;  margin: 6px 0 0 10px;"/>
 </a>
@@ -367,21 +368,21 @@ juno_okyo</a>
         }
     </script>
 <div class="main-full">
-<div class="banner_add-full">
+<div style="background-image:url('http://static.hayhaytv.vn/layout/images/bannerad/Premium.png');" class="banner_add-full">
 <div class="banner_add">
 <script src="http://www.hayhaytv.vn/jwplayer/jwplayer.js"></script>
 <script type="text/javascript" src="http://da.vcdn.vn/static/plugin/plugin.js"></script>
 <script type="text/javascript">
 var adsPlayed = 0;
-var adsXMLURL935866342e1a08b4a063a25e212d8176 = '';
+var adsXMLURL912bae5b80e27cb8241cfebd517c56d5 = '';
 var film_id = 'detail31303230366E61';
 var ready = false;
-var is_vip_text = '';
+var is_vip_text = ' VIP';
 player_id = "new_player";
 var isResumed = false;
 var is_trailer = false;
 var is_played = false;
-var is_backup935866342e1a08b4a063a25e212d8176=false;
+var is_backup912bae5b80e27cb8241cfebd517c56d5=false;
 var tracker_url = 'http://www.hayhaytv.vn/vod/track_preroll_played&name=';
 var prerollCap = ['Lavanet'];
 function addPlayer(movie_url, movie_image, info_url, subs, trailer) {
@@ -406,17 +407,15 @@ function addPlayer(movie_url, movie_image, info_url, subs, trailer) {
         }
     var userId = defaultObj.userId;
     var autostartFilm=false;
-    if(is_backup935866342e1a08b4a063a25e212d8176 && adsPlayed >= 2) 
+    if(is_backup912bae5b80e27cb8241cfebd517c56d5 && adsPlayed >= 2) 
     {
-    	adsXMLURL935866342e1a08b4a063a25e212d8176="";
+    	adsXMLURL912bae5b80e27cb8241cfebd517c56d5="";
     	autostartFilm=true;
     }
     jwplayer(player_id).setup({
         debug: true,
         primary: "flash",
         flashplayer: http + "jwplayer/jwplayer.flash.v9.swf",
-                hls_minbufferlength : 10,
-        hls_maxbufferlength : 60,
                 playlist: [ playlist_obj ],
         captions: {         //  format text for subtitles
             back: false,
@@ -433,12 +432,12 @@ function addPlayer(movie_url, movie_image, info_url, subs, trailer) {
         plugins: {
             "http://www.hayhaytv.vn/jwplayer/swf/at-plugin.v10.swf": {
                 userid: userId,
-                ads_pause_url: adsXMLURL935866342e1a08b4a063a25e212d8176,
+                ads_pause_url: adsXMLURL912bae5b80e27cb8241cfebd517c56d5,
                 info_url: info_url,
                 notify_cc_url: ""
             }
         },
-                autostart: autostartFilm,
+                autostart: true,
                 width: defaultObj.playerWidth,
         height: defaultObj.playerHeight,
         aspectratio: '16:9',
@@ -512,20 +511,20 @@ function OnPlayerComplete(e) {
     if(typeof(nextEpisode) != 'undefined' && nextEpisode.length){
         setTimeout(function(){
             window.location.href = nextEpisode;
-        },15000);
+        },300);
     }
 }
 
 function OnPlayerError(e) {
     playerInfo.isError = true;
 
-    if(!is_backup935866342e1a08b4a063a25e212d8176) {
-        is_backup935866342e1a08b4a063a25e212d8176=true;
+    if(!is_backup912bae5b80e27cb8241cfebd517c56d5) {
+        is_backup912bae5b80e27cb8241cfebd517c56d5=true;
          
           ga_event('Videos', 'Play', 'CDN ko xem được phim');
           
           _paq.push(['trackEvent', 'Videos', 'Play', 'CDN ko xem được phim']);
-                     addPlayer(initVideoUrlOld, imageSrc, infoXMLUrl, videoSubs935866342e1a08b4a063a25e212d8176);
+                     addPlayer(initVideoUrlOld, imageSrc, infoXMLUrl, videoSubs912bae5b80e27cb8241cfebd517c56d5);
     } else {
     //show popup_error
    	//	var container = $('.banner_player_player');
@@ -536,7 +535,7 @@ function OnPlayerError(e) {
 }       
 
 function retry_player(){
-    addPlayer(initVideoUrl935866342e1a08b4a063a25e212d8176, imageSrc, infoXMLUrl, videoSubs935866342e1a08b4a063a25e212d8176);
+    addPlayer(initVideoUrl912bae5b80e27cb8241cfebd517c56d5, imageSrc, infoXMLUrl, videoSubs912bae5b80e27cb8241cfebd517c56d5);
     $('#modal_player_error').hide();
 }
 
@@ -682,7 +681,7 @@ $(document).ready(function () {
 
                var initVideoUrlOld  = 'http://118.69.202.61:1935/hayhaytv_film/Fifty.Shades.Of.Grey.2015.Final.720p.mp4/playlist.m3u8';
             var initTrailerUrl = 'http://xhkvfcjz.cdnviet.com/3080aa66e775f5ec07e7d2705f9b50ed/rsbplxb/_definst_/mp4:rsbplxb/Fifty.Shades.Of.Grey.2014.Trailer.720p.mp4/playlist.m3u8'; // TO  DO
-            var adsXMLURL      = "http://www.hayhaytv.vn/vod/player_ads/31303230366E61-1&t=1436456303";
+            var adsXMLURL      = "http://www.hayhaytv.vn/vod/player_ads/31303230366E61-1&t=1436455803";
             var infoXMLUrl     = "http://www.hayhaytv.vn/vod/info/31303230366E61-1";
             var imageSrc       = "http://img.hayhaytv.com/film/01032015/fifty-shades-of-grey-poster_40551425190346.jpg";//background image cho player
             var videoSubs      = [{file: 'http://img.hayhaytv.com/subtitle/03052015/fifty.shades.of.grey.2015.unrated.bdrip.x264-amiable.vi_data_46461430617688.sub',label: 'Tiếng Việt',kind: 'captions',encoded: 'true','default': 'false'},{file: 'http://static.hayhaytv.vn/sprites/Fifty.Shades.Of.Grey.2015.Final.vtt',kind: 'thumbnails'}];
@@ -694,10 +693,9 @@ $(document).ready(function () {
         </script>
 <div id="modal_player_error" class="reveal-modal pp-alert w300">
 <p class="pp-ttitle"><span class="mh-ico-user">&nbsp;</span>THÔNG BÁO</p>
-<p>Server hơi mệt vì quá đông người xem. Bạn vui lòng quay lại sau ít phút hoặc chọn <a style="color:#1B64FF" href="http://www.hayhaytv.vn/tai-tro" title="Nạp VIP ngay">"Nạp VIP"</a> để đảm bảo chất lượng tốt hơn</p>
+<p>Kết nối đến server đang bị gián đoạn. Bạn vui lòng thử lại hoặc quay lại sau ít phút.</p>
 <p class="text-center">
 <a href="javascript:;" onclick="retry_player()" class="mh-btn-sty">Thử lại</a>
-<a href="http://www.hayhaytv.vn/tai-tro" target="_blank" title="Nạp VIP ngay" class="mh-btn-sty">Nạp VIP</a>
 </p>
 <a class="close-reveal-modal">×</a>
 </div>
@@ -738,22 +736,9 @@ $(document).ready(function () {
 <div class="clear_both"></div>
 </div>
 </div>
-<div class="AdvertiseBanner Ad35 banner_add-left tn-ads160"><input type="hidden" class="idAdvertise" value="35"><input type="hidden" class="nameAdvertise" value="Admicro_Skyscraper_Left"><input type="hidden" class="labelAdvertise" value="Skycrapper trái"><input type="hidden" class="pageNameAdvertise" value="Trang phim"><input type="hidden" class="pageIdAdvertise" value="1,2,3"><input type="hidden" class="atCampaignIdAdvertise" value="138"><input type="hidden" class="atPartnerIdAdvertise" value="30"><script type="text/javascript" src="http://admicro1.vcmedia.vn/ads_codes/ads_box_11914.ads"></script></div>
-<div class="AdvertiseBanner Ad285 banner_add-right tn-ads160"><input type="hidden" class="idAdvertise" value="285"><input type="hidden" class="nameAdvertise" value="Ants_160x600_2015_03_16"><input type="hidden" class="labelAdvertise" value="Skycrapper phải"><input type="hidden" class="pageNameAdvertise" value="Trang phim"><input type="hidden" class="pageIdAdvertise" value="1,2,3"><input type="hidden" class="atCampaignIdAdvertise" value="134"><input type="hidden" class="atPartnerIdAdvertise" value="62"> 
-<script type="text/javascript" src="//e-vcdn.anthill.vn/delivery-ants/zone/513888032.js"></script>
- </div>
-<div class="AdvertiseBanner Ad105 banner_add-bottom advertise-top-banner"><input type="hidden" class="idAdvertise" value="105"><input type="hidden" class="nameAdvertise" value="Netlink_Top_Banner_2014_12_08"><input type="hidden" class="labelAdvertise" value="Top banner"><input type="hidden" class="pageNameAdvertise" value="Trang phim"><input type="hidden" class="pageIdAdvertise" value="1,2,3"><input type="hidden" class="atCampaignIdAdvertise" value="137"><input type="hidden" class="atPartnerIdAdvertise" value="61"><script type="text/javascript">
-//<![CDATA[
-adorg_key = "e11ad62a4895c3bc98fad8b2c8648b8c";
-adorg_channel = "";
-adorg_code_format = "ads-sync.js";
-adorg_ads_host = "//serving.ad.org.vn";
-adorg_click = "";
-adorg_custom_params = {};
-
-document.write("<script type='text\/javascript' src='"+(location.protocol == 'https:' ? 'https:' : 'http:') + "//serving.ad.org.vn\/js/show_ads_adorg.js'><\/script>");
-//]]>
-</script></div>
+<div onclick="javascript:clickPremiumBannerDetail('Vip');" class="banner_add-left"></div>
+<div onclick="javascript:clickPremiumBannerDetail('Vip');" class="banner_add-right"></div>
+<div onclick="javascript:clickPremiumBannerDetail('Vip');" class="banner_add-bottom"></div>
 </div>
 </div>
 <div class="main">
@@ -833,13 +818,18 @@ document.write("<script type='text\/javascript' src='"+(location.protocol == 'ht
             
 			
             <!--------------------------------------SECTION_SIDE_BANNER_1------------------------>
-            <div class="AdvertiseBanner Ad353 " ><input type="hidden" class="idAdvertise" value="353"><input type="hidden" class="nameAdvertise" value="Ambient_Side1Banner_EX"><input type="hidden" class="labelAdvertise" value="Side banner 1"><input type="hidden" class="pageNameAdvertise" value="Trang phim"><input type="hidden" class="pageIdAdvertise" value="1,2,3"><input type="hidden" class="atCampaignIdAdvertise" value="192"><input type="hidden" class="atPartnerIdAdvertise" value="29"><script type="text/javascript">
-    	var _ase  = _ase || [];
-    	/* load placement for account: hayhaytv, site: http://hayhaytv.vn, zone size : 300x250 */
-    	_ase.push(["1400118516","1400118927"]);
-    	</script>
-    	<script src="http://static.gammaplatform.com/js/ad-exchange.js" type="text/javascript"></script>
-<noscript><iframe src="http://tag.gammaplatform.com/adx/noscript/zid_1400118927/wid_1400118516/" width="300" height="250" scrolling="no"  frameborder=0></iframe></noscript></div>            <!--------------------------------------SECTION_SIDE_BANNER_1------------------------>
+            <div class="AdvertiseBanner Ad189 " ><input type="hidden" class="idAdvertise" value="189"><input type="hidden" class="nameAdvertise" value="Netlink_Side1_Banner_2015_01_12"><input type="hidden" class="labelAdvertise" value="Side banner 1"><input type="hidden" class="pageNameAdvertise" value="Trang phim"><input type="hidden" class="pageIdAdvertise" value="1,2,3"><input type="hidden" class="atCampaignIdAdvertise" value="133"><input type="hidden" class="atPartnerIdAdvertise" value="61"><script type="text/javascript">
+//<![CDATA[
+adorg_key = "007a0fef624558a830ede64295f8e93d";
+adorg_channel = "";
+adorg_code_format = "ads-sync.js";
+adorg_ads_host = "//serving.ad.org.vn";
+adorg_click = "";
+adorg_custom_params = {};
+
+document.write("<script type='text\/javascript' src='"+(location.protocol == 'https:' ? 'https:' : 'http:') + "//serving.ad.org.vn\/js/show_ads_adorg.js'><\/script>");
+//]]>
+</script></div>            <!--------------------------------------SECTION_SIDE_BANNER_1------------------------>
             <div style="height:10px;" class="clear_with_border_bot"></div>
             <br class="clear_both"/>
             <div class="list_category">
@@ -860,7 +850,7 @@ document.write("<script type='text\/javascript' src='"+(location.protocol == 'ht
                 <div class="list_category-txt">
                     <h3><a href="http://www.hayhaytv.vn/xem-phim/phim-godzilla-quai-vat-godzilla-hd-393036346E61.html">Godzilla (2014)</a></h3>
                     <h4><a href="http://www.hayhaytv.vn/xem-phim/phim-godzilla-quai-vat-godzilla-hd-393036346E61.html">Quái Vật Godzilla</a></h4>
-                    <p>Lượt xem: 470873</p>
+                    <p>Lượt xem: 470872</p>
                 </div>
                 <br class="clear_both">
             </div>
@@ -869,7 +859,7 @@ document.write("<script type='text\/javascript' src='"+(location.protocol == 'ht
                 <div class="list_category-txt">
                     <h3><a href="http://www.hayhaytv.vn/xem-phim/phim-avengers--age-of-ultron-avengers--de-che-ultron-hd-31303535336E61.html">Avengers: Age of Ultron (2015)</a></h3>
                     <h4><a href="http://www.hayhaytv.vn/xem-phim/phim-avengers--age-of-ultron-avengers--de-che-ultron-hd-31303535336E61.html">Avengers: Đế Chế Ultron</a></h4>
-                    <p>Lượt xem: 327837</p>
+                    <p>Lượt xem: 327796</p>
                 </div>
                 <br class="clear_both">
             </div>
@@ -878,7 +868,7 @@ document.write("<script type='text\/javascript' src='"+(location.protocol == 'ht
                 <div class="list_category-txt">
                     <h3><a href="http://www.hayhaytv.vn/xem-phim/phim-kick-ass-2-nguoi-hung-cu-chuoi-2-hd-373338306E61.html">Kick-Ass 2 (2013)</a></h3>
                     <h4><a href="http://www.hayhaytv.vn/xem-phim/phim-kick-ass-2-nguoi-hung-cu-chuoi-2-hd-373338306E61.html">Người Hùng Củ Chuối 2</a></h4>
-                    <p>Lượt xem: 117952</p>
+                    <p>Lượt xem: 117951</p>
                 </div>
                 <br class="clear_both">
             </div>
@@ -914,7 +904,7 @@ document.write("<script type='text\/javascript' src='"+(location.protocol == 'ht
                 <div class="list_category-txt">
                     <h3><a href="http://www.hayhaytv.vn/xem-phim/phim-the-white-haired-witch-of-lunar-kingdom-tan-bach-phat-ma-nu-hd-31303030386E61.html">The White Haired Witch of Lunar Kingdom (2014)</a></h3>
                     <h4><a href="http://www.hayhaytv.vn/xem-phim/phim-the-white-haired-witch-of-lunar-kingdom-tan-bach-phat-ma-nu-hd-31303030386E61.html">Tân Bạch Phát Ma Nữ</a></h4>
-                    <p>Lượt xem: 162767</p>
+                    <p>Lượt xem: 162766</p>
                 </div>
                 <br class="clear_both">
             </div>
@@ -959,7 +949,7 @@ document.write("<script type='text\/javascript' src='"+(location.protocol == 'ht
                 <div class="list_category-txt">
                     <h3><a href="http://www.hayhaytv.vn/xem-phim/phim-divergent-ke-di-biet-hd-383536306E61.html">Divergent (2014)</a></h3>
                     <h4><a href="http://www.hayhaytv.vn/xem-phim/phim-divergent-ke-di-biet-hd-383536306E61.html">Kẻ Dị Biệt</a></h4>
-                    <p>Lượt xem: 256810</p>
+                    <p>Lượt xem: 256807</p>
                 </div>
                 <br class="clear_both">
             </div>
@@ -977,7 +967,7 @@ document.write("<script type='text\/javascript' src='"+(location.protocol == 'ht
                 <div class="list_category-txt">
                     <h3><a href="http://www.hayhaytv.vn/xem-phim/phim-lovers-va-movies-yeu-thi-xem-phim-cung-anh-hd-31343536366E61.html">Lovers & Movies (2015)</a></h3>
                     <h4><a href="http://www.hayhaytv.vn/xem-phim/phim-lovers-va-movies-yeu-thi-xem-phim-cung-anh-hd-31343536366E61.html">Yêu Thì Xem Phim Cùng Anh</a></h4>
-                    <p>Lượt xem: 175</p>
+                    <p>Lượt xem: 165</p>
                 </div>
                 <br class="clear_both">
             </div>
@@ -986,7 +976,7 @@ document.write("<script type='text\/javascript' src='"+(location.protocol == 'ht
                 <div class="list_category-txt">
                     <h3><a href="http://www.hayhaytv.vn/xem-phim/phim-irreversible-khong-con-gi-de-mat-hd-31343532366E61.html">Irréversible (2002)</a></h3>
                     <h4><a href="http://www.hayhaytv.vn/xem-phim/phim-irreversible-khong-con-gi-de-mat-hd-31343532366E61.html">Không Còn Gì Để Mất</a></h4>
-                    <p>Lượt xem: 3642</p>
+                    <p>Lượt xem: 3617</p>
                 </div>
                 <br class="clear_both">
             </div>
@@ -995,7 +985,7 @@ document.write("<script type='text\/javascript' src='"+(location.protocol == 'ht
                 <div class="list_category-txt">
                     <h3><a href="http://www.hayhaytv.vn/xem-phim/phim-lost-in-beijing-lac-loi-o-bac-kinh-hd-31343531386E61.html">Lost in Beijing (2010)</a></h3>
                     <h4><a href="http://www.hayhaytv.vn/xem-phim/phim-lost-in-beijing-lac-loi-o-bac-kinh-hd-31343531386E61.html">Lạc Lối ở Bắc Kinh</a></h4>
-                    <p>Lượt xem: 1662</p>
+                    <p>Lượt xem: 1660</p>
                 </div>
                 <br class="clear_both">
             </div>
@@ -1004,7 +994,7 @@ document.write("<script type='text\/javascript' src='"+(location.protocol == 'ht
                 <div class="list_category-txt">
                     <h3><a href="http://www.hayhaytv.vn/xem-phim/phim-la-bamba-khuc-ca-la-bamba-hd-31343531306E61.html">La Bamba (1987)</a></h3>
                     <h4><a href="http://www.hayhaytv.vn/xem-phim/phim-la-bamba-khuc-ca-la-bamba-hd-31343531306E61.html">Khúc Ca La Bamba</a></h4>
-                    <p>Lượt xem: 108</p>
+                    <p>Lượt xem: 107</p>
                 </div>
                 <br class="clear_both">
             </div>
@@ -1022,7 +1012,7 @@ document.write("<script type='text\/javascript' src='"+(location.protocol == 'ht
                 <div class="list_category-txt">
                     <h3><a href="http://www.hayhaytv.vn/xem-phim/phim-gone-girl-co-gai-mat-tich-hd-393938306E61.html">Gone Girl (2014)</a></h3>
                     <h4><a href="http://www.hayhaytv.vn/xem-phim/phim-gone-girl-co-gai-mat-tich-hd-393938306E61.html">Cô Gái Mất Tích</a></h4>
-                    <p>Lượt xem: 96135</p>
+                    <p>Lượt xem: 96132</p>
                 </div>
                 <br class="clear_both">
             </div>
@@ -1031,7 +1021,7 @@ document.write("<script type='text\/javascript' src='"+(location.protocol == 'ht
                 <div class="list_category-txt">
                     <h3><a href="http://www.hayhaytv.vn/xem-phim/phim-boyhood-thoi-nien-thieu-hd-31303731396E61.html">Boyhood (2014)</a></h3>
                     <h4><a href="http://www.hayhaytv.vn/xem-phim/phim-boyhood-thoi-nien-thieu-hd-31303731396E61.html">Thời Niên Thiếu</a></h4>
-                    <p>Lượt xem: 28420</p>
+                    <p>Lượt xem: 28416</p>
                 </div>
                 <br class="clear_both">
             </div>
@@ -1040,7 +1030,7 @@ document.write("<script type='text\/javascript' src='"+(location.protocol == 'ht
                 <div class="list_category-txt">
                     <h3><a href="http://www.hayhaytv.vn/xem-phim/phim-my-love,-dont-cross-that-river-tinh-yeu-di-cung-nam-thang-hd-31343433396E61.html">My Love, Don't Cross That River (2014)</a></h3>
                     <h4><a href="http://www.hayhaytv.vn/xem-phim/phim-my-love,-dont-cross-that-river-tinh-yeu-di-cung-nam-thang-hd-31343433396E61.html">Tình Yêu Đi Cùng Năm Tháng</a></h4>
-                    <p>Lượt xem: 2719</p>
+                    <p>Lượt xem: 2715</p>
                 </div>
                 <br class="clear_both">
             </div>
@@ -1049,7 +1039,7 @@ document.write("<script type='text\/javascript' src='"+(location.protocol == 'ht
                 <div class="list_category-txt">
                     <h3><a href="http://www.hayhaytv.vn/xem-phim/phim-perfect-proposal-am-muu-cua-lo-lem-hd-31343433376E61.html">Perfect Proposal (2015)</a></h3>
                     <h4><a href="http://www.hayhaytv.vn/xem-phim/phim-perfect-proposal-am-muu-cua-lo-lem-hd-31343433376E61.html">Âm Mưu Của Lọ Lem</a></h4>
-                    <p>Lượt xem: 4781</p>
+                    <p>Lượt xem: 4776</p>
                 </div>
                 <br class="clear_both">
             </div>
@@ -1132,14 +1122,14 @@ var check = 0;
 var check_admicro = 0;
 var xhrPool = [];
 var isVTT = false;//film VoTacThien
-var ADS_TRACK935866342e1a08b4a063a25e212d8176 = '';
-adsXMLURL935866342e1a08b4a063a25e212d8176    = typeof(adsXMLURL) != 'undefined' ? adsXMLURL : false ;
-initVideoUrl935866342e1a08b4a063a25e212d8176 = typeof(initVideoUrl) != 'undefined' ? initVideoUrl : false ;
-videoSubs935866342e1a08b4a063a25e212d8176    = typeof(videoSubs) != 'undefined' ? videoSubs : false ;
+var ADS_TRACK912bae5b80e27cb8241cfebd517c56d5 = '';
+adsXMLURL912bae5b80e27cb8241cfebd517c56d5    = typeof(adsXMLURL) != 'undefined' ? adsXMLURL : false ;
+initVideoUrl912bae5b80e27cb8241cfebd517c56d5 = typeof(initVideoUrl) != 'undefined' ? initVideoUrl : false ;
+videoSubs912bae5b80e27cb8241cfebd517c56d5    = typeof(videoSubs) != 'undefined' ? videoSubs : false ;
 $(document).ready(function () {
-    ADS_TRACK935866342e1a08b4a063a25e212d8176 = typeof(ADS_TRACK) != 'undefined' ? ADS_TRACK : true ;
-     if (ADS_TRACK935866342e1a08b4a063a25e212d8176 && 1) {
-        videoSubs = initVideoUrl = jwplayer = initVideoUrl935866342e1a08b4a063a25e212d8176 = videoSubs935866342e1a08b4a063a25e212d8176 = '';
+    ADS_TRACK912bae5b80e27cb8241cfebd517c56d5 = typeof(ADS_TRACK) != 'undefined' ? ADS_TRACK : true ;
+     if (ADS_TRACK912bae5b80e27cb8241cfebd517c56d5 && 0) {
+        videoSubs = initVideoUrl = jwplayer = initVideoUrl912bae5b80e27cb8241cfebd517c56d5 = videoSubs912bae5b80e27cb8241cfebd517c56d5 = '';
         adBlockWarning();
     }
     
@@ -1301,11 +1291,11 @@ $(document).ready(function () {
             })
         },3000);
         
-        if(!addPlayer(initVideoUrl935866342e1a08b4a063a25e212d8176, imageSrc, infoXMLUrl, videoSubs935866342e1a08b4a063a25e212d8176)){
+        if(!addPlayer(initVideoUrl912bae5b80e27cb8241cfebd517c56d5, imageSrc, infoXMLUrl, videoSubs912bae5b80e27cb8241cfebd517c56d5)){
             return false;
         }
-                eventTracking('Videos', 'Play', 'Nhấp vào nút xem ngay.');
-        _paq.push(['trackEvent', 'Videos', 'Play', 'Nhấp vào nút xem ngay']);
+                eventTracking('Videos', 'Play VIP', 'Nhấp vào nút xem ngay.');
+        _paq.push(['trackEvent', 'Videos', 'Play VIP', 'Nhấp vào nút xem ngay']);
                 ga_event('Phim Lẻ', 'Xem Phim', 'Phim Tình cảm');
         // addPlayer(initVideoUrl, imageSrc , 'http://www.hayhaytv.vn/ads.xml', videoSubs);
         button = 2;
@@ -1339,17 +1329,7 @@ var FILM_URL = 'http://www.hayhaytv.vn/xem-phim/phim-fifty-shades-of-grey-50-sac
 
 
 <!--------------------------------------SECTION_MID_BANNER_2------------------------>
-<div class="AdvertiseBanner Ad10 AdvertiseBalloonFooterBottomRight" ><input type="hidden" class="idAdvertise" value="10"><input type="hidden" class="nameAdvertise" value="Ambient_Balloon"><input type="hidden" class="labelAdvertise" value="Balloon Footer Bottom Right"><input type="hidden" class="pageNameAdvertise" value="Trang phim"><input type="hidden" class="pageIdAdvertise" value="1,2,3"><script type="text/javascript">
-                var _abd = _abd || [];
-                /* load placement for account: hayhaytv, site: http://hayhaytv.vn, size: 1x1 - web, zone: popup */
-                _abd.push(["1371548360", "Popup", "1371548417"]);
-            </script>
-            <script src="http://media.adnetwork.vn/js/adnetwork.js" type="text/javascript"></script>
-            <noscript>
-            <div style="bottom:0;position: fixed;right: 0;"><a
-                    href="http://track.adnetwork.vn/247/adServerNs/zid_1371548417/wid_1371548360/" target="_blank"><img
-                        src="http://delivery.adnetwork.vn/247/noscript/zid_1371548417/wid_1371548360/"/></a></div>
-            </noscript></div><!--------------------------------------SECTION_MID_BANNER_2------------------------>
+<!--------------------------------------SECTION_MID_BANNER_2------------------------>
 
 <!--------------------------------------SECTION_MID_BANNER_2------------------------>
 <!--------------------------------------SECTION_MID_BANNER_2------------------------>    
@@ -1428,7 +1408,7 @@ var FILM_URL = 'http://www.hayhaytv.vn/xem-phim/phim-fifty-shades-of-grey-50-sac
             <p style="text-align: right; margin-top: 10px; margin-left: -40px; line-height: normal;"> Đơn vị chủ quản:<a target="_blank" rel="nofollow" href="javascript:void(0)"> CTCP BÁCH TRIỆU PHÁT</a><br>
             Copyrights &copy; 2013 HayhayTV - Hay là Play.<br>
             Giấy phép MXH số: 182/GP-BTTTT<br>
-            Liên hệ quảng cáo: <a rel="nofollow" href="/cdn-cgi/l/email-protection#fb8a8e9a959c989a94bb939a82939a828f8dd58d95"><span class="__cf_email__" data-cfemail="f18084909f9692909eb19990889990888587df879f">[email&#160;protected]</span><script cf-hash='f9e31' type="text/javascript">
+            Liên hệ quảng cáo: <a rel="nofollow" href="/cdn-cgi/l/email-protection#443531252a2327252b042c253d2c253d30326a322a"><span class="__cf_email__" data-cfemail="96e7e3f7f8f1f5f7f9d6fef7effef7efe2e0b8e0f8">[email&#160;protected]</span><script cf-hash='f9e31' type="text/javascript">
 /* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script></a>
             </p>
         </div>
@@ -1500,7 +1480,7 @@ var FILM_URL = 'http://www.hayhaytv.vn/xem-phim/phim-fifty-shades-of-grey-50-sac
 		<div style="loat: left">
 			<p>
 				<label class="label_color" for="birthday_confirm"> Ngày sinh:<span class="requite_color">(*)</span></label>
-								<input type="text" name="birthday_confirm" id="birthday_confirm" placeholder="Định dạng ngày sinh: 23-10-2010" value="01-02-1990">
+								<input type="text" name="birthday_confirm" id="birthday_confirm" placeholder="Định dạng ngày sinh: 23-10-2010" value="03-12-1993">
 			</p>
 			<div id="error_birthday_confirm" class="error_popup"></div>
 			<p>                    
@@ -1626,7 +1606,7 @@ var FILM_URL = 'http://www.hayhaytv.vn/xem-phim/phim-fifty-shades-of-grey-50-sac
 		var id_city = $('#id_city_confirm').val();
 		var email_2 = $('#email_2_confirm').val();
 		var allow = true;
-		var token = '2fb5b0104dbcb0b5a645ed937c21167b';
+		var token = 'b5ea47cd0ffe1b9e166d522f06641442';
 		$('#error_birthday_confirm').html('');
 		$('#error_gender_confirm').html('');
 		$('#error_city_confirm').html('');
