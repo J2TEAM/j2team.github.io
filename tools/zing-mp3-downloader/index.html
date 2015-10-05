@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Zing Mp3 Downloader</title>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="//cdnjs.cloudflare.com/ajax/libs/smokejs/2.2.4/css/smoke.min.css" rel="stylesheet" />
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">body {padding-top: 20px;}#_downloadFrame{width: 0px; height: 0px}</style>
+	</head>
+	<body>
+		<div class="container" id="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="panel panel-default" id="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title"><span class="glyphicon glyphicon-music"></span> Zing Mp3 Downloader v1.0.0</h3>
+						</div>
+						<div class="panel-body">
+							<form action="javascript:get_link();" method="POST" role="form">
+								<legend>Get high quality download link of songs, videos, albums or playlists on <a href="http://mp3.zing.vn/" title="Zing Mp3" target="_blank">mp3.zing.vn</a></legend>
+								
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon" id="basic-addon-url">
+											<label for="url"><span class="glyphicon glyphicon-link"></span> URL</label>
+										</span>
+										<input type="url" class="form-control input-lg" id="url" aria-describedby="basic-addon-url" pattern="^https?://mp3\.zing\.vn/(bai-hat|video-clip|album|playlist)/[a-zA-Z0-9-]+/[A-Z0-9]{1,12}\.html" placeholder="http://mp3.zing.vn/bai-hat/Mua-Xa-Nhau-Emily/ZW6FOAUA.html" autofocus="" required="" />
+										<span class="input-group-btn">
+											<button class="btn btn-default btn-lg" id="submitBtn" type="submit" data-loading-text="Loading...">GET <span class="glyphicon glyphicon-ok"></span></button>
+										</span>
+									</div>
+								</div>
+							</form>
+							<div class="alert alert-info" id="example">
+								<strong>Example URLs:</strong>
+								<br /><br />
+								<ul>
+									<li><a class="exampleURL" title="Click to get this link!" target="_blank" href="http://mp3.zing.vn/bai-hat/Chua-Bao-Gio-Trung-Quan-Idol/ZW7WI6FE.html">http://mp3.zing.vn/bai-hat/Chua-Bao-Gio-Trung-Quan-Idol/ZW7WI6FE.html</a></li>
+									<li><a class="exampleURL" title="Click to get this link!" target="_blank" href="http://mp3.zing.vn/album/Vo-Nguoi-Ta-Phan-Manh-Quynh/ZWZC0F0U.html">http://mp3.zing.vn/album/Vo-Nguoi-Ta-Phan-Manh-Quynh/ZWZC0F0U.html</a></li>
+									<li><a class="exampleURL" title="Click to get this link!" target="_blank" href="http://mp3.zing.vn/album/Mini-Anbum-JUST-A-TEE-JustaTee-Bueno-Mr-A/ZWZ9D88E.html">http://mp3.zing.vn/album/Mini-Anbum-JUST-A-TEE-JustaTee-Bueno-Mr-A/ZWZ9D88E.html</a></li>
+									<li><a class="exampleURL" title="Click to get this link!" target="_blank" href="http://mp3.zing.vn/video-clip/Dua-Nhau-Di-Tron-Den-Linh-Cao/ZW7W0F8E.html">http://mp3.zing.vn/video-clip/Dua-Nhau-Di-Tron-Den-Linh-Cao/ZW7W0F8E.html</a></li>
+									<li><a class="exampleURL" title="Click to get this link!" target="_blank" href="http://mp3.zing.vn/playlist/Two-Steps-From-Hell-Dang-cap-nhat/IW8FAIA9.html">http://mp3.zing.vn/playlist/Two-Steps-From-Hell-Dang-cap-nhat/IW8FAIA9.html</a></li>
+								</ul>
+							</div>
+							<div class="text-center">
+								<button class="btn btn-primary hidden" id="exportBtn" data-clipboard-text="Error!" data-toggle="tooltip" data-placement="top" title="Go to menu Tasks > Add batch download from clipboard."><span class="glyphicon glyphicon-export"></span> Export Alls To Download With IDM</button>
+							</div>
+						</div>
+						<div id="queue-container"></div>
+						<div class="panel-footer">
+							<span class="pull-right">Copyright &copy; 2015 <strong>J2TeaM</strong></span>
+							Developed by <a href="http://junookyo.blogspot.com/" target="_blank">Juno_okyo</a>.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Bootstrap -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/smokejs/2.2.4/js/smoke.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/smokejs/2.2.4/lang/es.min.js"></script>
+		<script src="js/clipboard.min.js"></script>
+		
+		<!-- React -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.min.js"></script>
+		<script src="js/juno_okyo.min.js"></script>
+
+		<!-- Temp iframe -->
+		<iframe src="about:blank" id="_downloadFrame" class="hidden"></iframe>
+	</body>
+</html>
