@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" /><meta http-equiv="cache-control" content="cache" /><meta http-equiv="content-language" content="en" /><meta http-equiv="revisit-after" content="7 days" /><meta name="keywords" content="juno_okyo, addon.xml generator, kodi addon.xml, xbmc addon.xml" /><meta name="description" content="Generate an addon.xml for your Kodi add-on." /><meta name="author" content="Juno_okyo" /><meta name="copyright" content="Juno_okyo" /><meta name="generator" content="Juno_okyo" /><meta name="robots" content="index, follow" /><meta property="og:title" content="Kodi addon.xml generator by Juno_okyo" /><meta property="og:description" content="Generate an addon.xml for your Kodi add-on." /><meta property="og:url" content="https://j2team.github.io/tools/kodi-addon-xml-generator/index.html" /><meta property="og:type" content="website" /><meta property="og:image" content="http://i.imgur.com/OumOZw9.png" /><meta property="og:site_name" content="Kodi addon.xml generator by Juno_okyo" /><meta property="og:locale" content="vi_VN" /><meta property="fb:admins" content="100003880469096" /><meta property="fb:app_id" content="458084867627529" /><meta name="twitter:card" content="summary" /><meta name="twitter:site" content="Kodi addon.xml generator by Juno_okyo" /><meta name="twitter:title" content="Kodi addon.xml generator by Juno_okyo" /><meta name="twitter:description" content="Generate an addon.xml for your Kodi add-on." /><meta name="twitter:image:src" content="http://i.imgur.com/OumOZw9.png" /><meta name="twitter:creator" content="@juno_okyos" /><meta name="twitter:url" content="https://j2team.github.io/tools/kodi-addon-xml-generator/index.html" /><meta itemprop="name" content="Kodi addon.xml generator by Juno_okyo" /><meta itemprop="description" content="Generate an addon.xml for your Kodi add-on." /><meta itemprop="image" content="http://i.imgur.com/OumOZw9.png" />
+		<title>Kodi addon.xml generator by Juno_okyo</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="author" href="https://plus.google.com/u/0/108443613096446306111/" />
+		<link rel="publisher" href="https://plus.google.com/u/0/108443613096446306111/" />
+		<link rel="canonical" href="https://j2team.github.io/tools/kodi-addon-xml-generator/index.html" />
+
+		<link href="css/juno_okyo.css" rel="stylesheet" />
+		<link href="//cdnjs.cloudflare.com/ajax/libs/smokejs/2.2.4/css/smoke.min.css" rel="stylesheet" />
+		<link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" rel="stylesheet" />
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div class="row" id="header">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+					<h1 class="animated bounceInDown">addon.xml generator for Kodi (XBMC)</h1>
+					<h3>Developed by <a href="http://junookyo.blogspot.com/" target="_blank" title="Juno_okyo's Blog">Juno_okyo</a> - <a href="https://github.com/J2TeaM-dev" target="_blank" title="J2TeaM">J2TeaM</a></h3>
+					<hr />
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="form">
+					<div class="panel panel-info">
+						  <div class="panel-heading">
+								<h3 class="panel-title"><span class="glyphicon glyphicon-edit"></span> Add-on Informations</h3>
+						  </div>
+						  <div class="panel-body">
+								<form action="javascript:void(0);" method="POST" role="form">
+									<legend>Fill out this form to generate <a href="http://kodi.wiki/view/Addon.xml" target="_blank" data-toggle="tooltip" data-placement="top" title="Read more about addon.xml on Wiki">addon.xml</a></legend>
+								
+									<div class="form-group">
+										<label for="addon-id">ID</label>
+										<input type="text" class="form-control" id="addon-id" ng-model="addon_id" placeholder="your.addon.id" autofocus="" required="" data-toggle="tooltip" data-placement="top" title="Your add-on's ID" />
+									</div>
+
+									<div class="form-group">
+										<label for="addon-name">Name</label>
+										<input type="text" class="form-control" id="addon-name" ng-model="addon_name" placeholder="Your add-on's name" required="" data-toggle="tooltip" data-placement="top" title="Your add-on's name" />
+									</div>
+
+									<div class="form-group">
+										<label for="addon-version">Version</label>
+										<input type="text" class="form-control" id="addon-version" ng-model="addon_version" placeholder="0.0.1" value="0.0.1" pattern="^[0-9.]+$" required="" data-toggle="tooltip" data-placement="top" title="Your add-on's version" />
+									</div>
+
+									<div class="form-group">
+										<label for="addon-provider">Provider Name</label>
+										<input type="text" class="form-control" id="addon-provider" ng-model="addon_provider" placeholder="Your name" required="" data-toggle="tooltip" data-placement="top" title="Your name" />
+									</div>
+
+									<div class="form-group">
+										<label for="addon-summary">Summary</label>
+										<input type="text" class="form-control" id="addon-summary" ng-model="addon_summary" placeholder="Your add-on's summary" required="" data-toggle="tooltip" data-placement="top" title="Your add-on's summary" />
+									</div>
+
+									<div class="form-group">
+										<label for="addon-description">Description</label>
+										<input type="text" class="form-control" id="addon-description" ng-model="addon_description" placeholder="Your add-on's description" required="" data-toggle="tooltip" data-placement="top" title="Your add-on's description" />
+									</div>
+
+									<div class="form-group">
+										<label for="addon-disclaimer">Disclaimer</label>
+										<input type="text" class="form-control" id="addon-disclaimer" ng-model="addon_disclaimer" placeholder="Feel free to use this script" data-toggle="tooltip" data-placement="top" title="Your add-on's disclaimer" />
+									</div>
+
+									<div class="form-group">
+										<label for="addon-language">Language</label>
+										<input type="text" class="form-control" id="addon-language" ng-model="addon_language" placeholder="en" data-toggle="tooltip" data-placement="top" title="Your add-on's language" />
+									</div>
+
+									<div class="form-group">
+										<label for="addon-platform">Platform (all/linux/osx/osx64/osx32/ios/windx/android)</label>
+										<input type="text" class="form-control" id="addon-platform" ng-model="addon_platform" placeholder="all" value="all" required="" data-toggle="tooltip" data-placement="top" title="Your add-on's platform" />
+									</div>
+
+									<div class="form-group">
+										<label for="addon-license">License [<a href="http://choosealicense.com/" title="Choose a license" target="_blank">?</a>]</label>
+										<input type="text" class="form-control" id="addon-license" ng-model="addon_license" placeholder="GNU GENERAL PUBLIC LICENSE Version 2" data-toggle="tooltip" data-placement="top" title="Your add-on's license" />
+									</div>
+
+									<div class="form-group">
+										<label for="addon-forum">Forum (optional)</label>
+										<input type="url" class="form-control" id="addon-forum" ng-model="addon_forum" placeholder="http://www.myaddonwebsite.com/forum.php?thread=12345" data-toggle="tooltip" data-placement="top" title="Forum" />
+									</div>
+
+									<div class="form-group">
+										<label for="addon-website">Website</label>
+										<input type="url" class="form-control" id="addon-website" ng-model="addon_website" placeholder="http://www.example.com/" data-toggle="tooltip" data-placement="top" title="Your add-on's website" />
+									</div>
+
+									<div class="form-group">
+										<label for="addon-email">Email (optional)</label>
+										<input type="email" class="form-control" id="addon-email" ng-model="addon_email" placeholder="username@example.com" data-toggle="tooltip" data-placement="top" title="Your email" />
+									</div>
+
+									<div class="form-group">
+										<label for="addon-source">Source (optional)</label>
+										<input type="url" class="form-control" id="addon-source" ng-model="addon_source" placeholder="https://github.com/username/my-addon" data-toggle="tooltip" data-placement="top" title="Your add-on's source on Github" />
+									</div>
+
+									<!-- Hidden submit button (user can press Enter button to validate inputs) -->
+									<button type="submit" class="hidden">Submit</button>
+									<button type="reset" class="btn btn-default btn-block"><span class="glyphicon glyphicon-refresh"></span> Reset Form</button>
+								</form>
+						  </div>
+					</div>
+				</div>
+				
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<div class="row" id="result" data-spy="affix" data-offset-top="126" data-offset-bottom="20">
+						<pre class="xml" id="addonXML">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;addon
+  id=&quot;{{addon_id}}&quot;
+  name=&quot;{{addon_name}}&quot;
+  version=&quot;{{addon_version}}&quot;
+  provider-name=&quot;{{addon_provider}}&quot;&gt;
+    &lt;requires&gt;
+        &lt;import addon=&quot;xbmc.python&quot; version=&quot;2.20.0&quot;/&gt;
+    &lt;/requires&gt;
+    &lt;extension point=&quot;xbmc.python.pluginsource&quot; library=&quot;addon.py&quot;&gt;
+        &lt;provides&gt;video&lt;/provides&gt;
+    &lt;/extension&gt;
+    &lt;extension point=&quot;xbmc.addon.metadata&quot;&gt;
+        &lt;summary lang=&quot;en&quot;&gt;{{addon_summary}}&lt;/summary&gt;
+        &lt;description lang=&quot;en&quot;&gt;{{addon_description}}&lt;/description&gt;
+        &lt;disclaimer lang=&quot;en&quot;&gt;{{addon_disclaimer}}&lt;/disclaimer&gt;
+        &lt;language&gt;{{addon_language}}&lt;/language&gt;
+        &lt;platform&gt;{{addon_platform}}&lt;/platform&gt;
+        &lt;license&gt;{{addon_license}}&lt;/license&gt;
+        &lt;forum&gt;{{addon_forum}}&lt;/forum&gt;
+        &lt;website&gt;{{addon_website}}&lt;/website&gt;
+        &lt;email&gt;{{addon_email}}&lt;/email&gt;
+        &lt;source&gt;{{addon_source}}&lt;/source&gt;
+    &lt;/extension&gt;
+&lt;/addon&gt;</pre>
+						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<button class="btn btn-primary btn-block" id="copyBtn" data-clipboard-target="#addonXML" data-toggle="tooltip" data-placement="bottom" title="Copy addon.xml content to clipboard"><span class="glyphicon glyphicon-copy"></span> Copy to clipboard</button>
+						</div>
+						
+						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<a class="btn btn-success btn-block" id="downloadBtn" download="addon.xml" data-toggle="tooltip" data-placement="bottom" title="Click here to download addon.xml file"><span class="glyphicon glyphicon-download-alt"></span> Download addon.xml</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/juno_okyo.js"></script>
+	</body>
+</html>
