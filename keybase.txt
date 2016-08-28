@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/juno_okyo
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://j2team.github.io
+  * I am juno_okyo (https://keybase.io/juno_okyo) on keybase.
+  * I have a public key with fingerprint EB24 F251 C1D1 E83B DBC5  61E4 967C CEDC 4EA6 6A66
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101468c13348561d9d492c6b4cffa0f0864d57d72916eb8beb41d373499790cc2ba0a",
+            "fingerprint": "eb24f251c1d1e83bdbc561e4967ccedc4ea66a66",
+            "host": "keybase.io",
+            "key_id": "967ccedc4ea66a66",
+            "kid": "0101468c13348561d9d492c6b4cffa0f0864d57d72916eb8beb41d373499790cc2ba0a",
+            "uid": "a6d012cc7f19c20335f1ca13edf91519",
+            "username": "juno_okyo"
+        },
+        "service": {
+            "hostname": "j2team.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1472416293,
+    "expire_in": 157680000,
+    "prev": "40c69306b4c90065ed2a7fede7b339d406a8242e8b32e76018f5b1f188f11810",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.56
+Comment: https://keybase.io/crypto
+
+yMIwAnicrVJbSBRRGF5rDVs1IpR6EhvowQs6Z2Z2LhuWEF0pLKNMEKaZc86447oz
+2+6stciidpHMROlCdCHtIaKXMCQrMbwmRTcKi7IrWm7oFhJWUFidsXrrscOBw/nP
+933n+z/+wdS5DldC/surT5cvbtyScKfvTNhRMrBhWTWlmihCeaopH549cCXCIUv2
+6YjyUDSgAceLELAsJ7p5gCTESQzkVQ5qmkJrtMhzyC0ggZEAj1VRxSoHECuwnCQJ
+Eg0hoyq0QuVSmm6U42AgqBsWkcUqw2mMG0CAABZZFamQiGNO4gUIMYIcVniebEL0
+miGbQcypSgjn6SapkYs8a+8f+P/sOzwrp/CIBgyEggYkyNAs69YAVACLkSYBN5Bs
+YAgHDcWPCboibJiy6YuYVDSXIuUqHWI7WbuVvxDGwoo/r1y3vGH1d1OBoGmZ0Kwk
+r17LCoQ8NtuKBGz4bqzKf4RkVTcQCZMwqnAwpJsG5QEECS3dVgacwHCAZyQ2l8J7
+AnoQy7qNcAu8SJNl/4OriCRHQ15iaTsRiaZ5N0aMImgYYUFlWZIWzSsiwzFYVFkG
+CzwNRM2tAg2IogaACGjKbm2XYVIekdhUyolkSC83FCscxFS0v7fM6UhwOeYlzrGH
+zOGav/Dv6JXcSnKcmyuvObmiZmQA41ObJm43vx9v+/zWtfTawgXRbQX5HwbTC1qG
+Ku/v+LR17+hF+WFSw6M3t29NuzIfTFSkns7wTl1e/qRj4/Y5Y025Pxf09PoL685m
+DfV3TrWnj+QcGw57sg4eauaeXamdXHm6xVl2tHh356uC0iZNR8NTl/zWuo7Whtf1
+Cd1LPrZmFr5JK6rfvzk787qRtCj+OK6U5O8cPfIgWvot+Wvd8zGwvX0kMSLci/U5
+M8Z73uXkp1d0zXRlpDhPrO+eST6+tigxrS+Uvfr83dpVdVS44UVK3PfF9yNW01gc
+oW5+XzIcjx0ua2dvTFemyPFtbQcu7ItN+nRvNPndLxeIRn0=
+=3fdr
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/juno_okyo
+
+==================================================================
