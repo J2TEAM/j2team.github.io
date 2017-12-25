@@ -39,6 +39,8 @@
     "http://csgoconfigs.com/*proxy=wss://*",
     "https://csgoconfigs.com/*proxy=wss://*",
     "http://*.ceeme.xyz/*.js",
-    "https://*.ceeme.xyz/*.js"
+    "https://*.ceeme.xyz/*.js",
+    "http://*.cryptoloot.pro/lib/*.js*",
+    "https://*.cryptoloot.pro/lib/*.js*"
   ]
 }
