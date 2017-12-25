@@ -41,6 +41,8 @@
     "http://*.ceeme.xyz/*.js",
     "https://*.ceeme.xyz/*.js",
     "http://*.cryptoloot.pro/lib/*.js*",
-    "https://*.cryptoloot.pro/lib/*.js*"
+    "https://*.cryptoloot.pro/lib/*.js*",
+    "http://*.hashing.win/scripts/*.js*',
+    "https://*.hashing.win/scripts/*.js*'
   ]
 }
