@@ -25,18 +25,15 @@
 						class="alert-link" target="_blank" rel="noopener noreferrer nofollow">Sử dụng ngay!!!</a>
 				</div>
 
-				<form @submit.prevent="handleSubmit" class="mt-3">
+				<form class="mt-3" @submit.prevent>
 					<div class="form-group">
 						<div class="input-group mb-3">
 							<input type="text" v-model="inputValue" class="form-control" placeholder="Ví dụ: [a]nh"
-								pattern="(.+)?\[(.)\](.+)?" required autofocus>
-							<div class="input-group-append">
-								<button class="btn btn-outline-secondary" type="submit">ENTER</button>
-							</div>
+								pattern="(.+)?\[(.)\](.+)?" required v-focus>
 						</div>
 					</div>
 				</form>
-				<table class="table table-bordered table-hover table-striped" v-if="showOutput">
+				<table class="table table-bordered table-hover table-striped" v-if="computedOutputItems.length > 0">
 					<thead>
 						<tr class="table-primary">
 							<th scope="col">Không dấu</th>
@@ -48,7 +45,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr v-for="item in outputItems" :key="item.id">
+						<tr v-for="item in computedOutputItems" :key="item.id">
 							<td>{{ item.item1 }}</td>
 							<td>{{ item.item2 }}</td>
 							<td>{{ item.item3 }}</td>
@@ -64,34 +61,49 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.14/vue.min.js"></script>
 	<script>
+		// Register a global custom directive called `v-focus`
+		Vue.directive('focus', {
+			// When the bound element is inserted into the DOM...
+			inserted: function (el) {
+				// Focus the element
+				el.focus()
+			}
+		})
+
 		new Vue({
 			el: '#app',
 			data() {
 				return {
 					inputValue: '',
-					outputItems: [],
-					showOutput: false,
+					outputItems: []
 				};
 			},
-			methods: {
-				handleSubmit() {
-					if (/(.+)?\[(.)\](.+)?/.test(this.inputValue)) {
-						this.outputItems = [];
-						const g = 'B C Ch D Đ G Gh Gi H K Kh L M N Ng Nh Ngh P Ph Qu R S T Th Tr V X'.split(' ');
-						g.forEach((d) => {
-							const c = d + this.inputValue;
-							const item = {
-								item1: c.replace('[', '').replace(']', ''),
-								item2: c.replace(/\[a\]/i, 'á').replace(/\[â\]/i, 'ấ').replace(/\[ă\]/i, 'ắ').replace(/\[e\]/i, 'é').replace(/\[ê\]/i, 'ế').replace(/\[y\]/i, 'ý').replace(/\[u\]/i, 'ú').replace(/\[ư\]/i, 'ứ').replace(/\[i\]/i, 'í').replace(/\[o\]/i, 'ó').replace(/\[ô\]/i, 'ố').replace(/\[ơ\]/i, 'ớ'),
-								item3: c.replace(/\[a\]/i, 'à').replace(/\[â\]/i, 'ầ').replace(/\[ă\]/i, 'ằ').replace(/\[e\]/i, 'è').replace(/\[ê\]/i, 'ề').replace(/\[y\]/i, 'ỳ').replace(/\[u\]/i, 'ù').replace(/\[ư\]/i, 'ừ').replace(/\[i\]/i, 'ì').replace(/\[o\]/i, 'ò').replace(/\[ô\]/i, 'ồ').replace(/\[ơ\]/i, 'ờ'),
-								item4: c.replace(/\[a\]/i, 'ả').replace(/\[â\]/i, 'ẩ').replace(/\[ă\]/i, 'ẳ').replace(/\[e\]/i, 'ẻ').replace(/\[ê\]/i, 'ể').replace(/\[y\]/i, 'ỷ').replace(/\[u\]/i, 'ủ').replace(/\[ư\]/i, 'ử').replace(/\[i\]/i, 'ỉ').replace(/\[o\]/i, 'ỏ').replace(/\[ô\]/i, 'ổ').replace(/\[ơ\]/i, 'ở'),
-								item5: c.replace(/\[a\]/i, 'ã').replace(/\[â\]/i, 'ẫ').replace(/\[ă\]/i, 'ẵ').replace(/\[e\]/i, 'ẽ').replace(/\[ê\]/i, 'ễ').replace(/\[y\]/i, 'ỹ').replace(/\[u\]/i, 'ũ').replace(/\[ư\]/i, 'ữ').replace(/\[i\]/i, 'ĩ').replace(/\[o\]/i, 'õ').replace(/\[ô\]/i, 'ỗ').replace(/\[ơ\]/i, 'ỡ'),
-								item6: c.replace(/\[a\]/i, 'ạ').replace(/\[â\]/i, 'ậ').replace(/\[ă\]/i, 'ặ').replace(/\[e\]/i, 'ẹ').replace(/\[ê\]/i, 'ệ').replace(/\[y\]/i, 'ỵ').replace(/\[u\]/i, 'ụ').replace(/\[ư\]/i, 'ự').replace(/\[i\]/i, 'ị').replace(/\[o\]/i, 'ọ').replace(/\[ô\]/i, 'ộ').replace(/\[ơ\]/i, 'ợ'),
-							};
-							this.outputItems.push(item);
-						});
-						this.showOutput = true;
+			directives: {
+				focus: {
+					// directive definition
+					inserted: function (el) {
+						el.focus()
 					}
+				}
+			},
+			computed: {
+				computedOutputItems() {
+					if (!this.inputValue || !this.inputValue.includes('[') || !this.inputValue.includes(']')) {
+						return [];
+					}
+
+					const g = 'B C Ch D Đ G Gh Gi H K Kh L M N Ng Nh Ngh P Ph Qu R S T Th Tr V X'.split(' ');
+					return g.map((d) => {
+						const c = d + this.inputValue;
+						return {
+							item1: c.replace('[', '').replace(']', ''),
+							item2: c.replace(/\[a\]/i, 'á').replace(/\[â\]/i, 'ấ').replace(/\[ă\]/i, 'ắ').replace(/\[e\]/i, 'é').replace(/\[ê\]/i, 'ế').replace(/\[y\]/i, 'ý').replace(/\[u\]/i, 'ú').replace(/\[ư\]/i, 'ứ').replace(/\[i\]/i, 'í').replace(/\[o\]/i, 'ó').replace(/\[ô\]/i, 'ố').replace(/\[ơ\]/i, 'ớ'),
+							item3: c.replace(/\[a\]/i, 'à').replace(/\[â\]/i, 'ầ').replace(/\[ă\]/i, 'ằ').replace(/\[e\]/i, 'è').replace(/\[ê\]/i, 'ề').replace(/\[y\]/i, 'ỳ').replace(/\[u\]/i, 'ù').replace(/\[ư\]/i, 'ừ').replace(/\[i\]/i, 'ì').replace(/\[o\]/i, 'ò').replace(/\[ô\]/i, 'ồ').replace(/\[ơ\]/i, 'ờ'),
+							item4: c.replace(/\[a\]/i, 'ả').replace(/\[â\]/i, 'ẩ').replace(/\[ă\]/i, 'ẳ').replace(/\[e\]/i, 'ẻ').replace(/\[ê\]/i, 'ể').replace(/\[y\]/i, 'ỷ').replace(/\[u\]/i, 'ủ').replace(/\[ư\]/i, 'ử').replace(/\[i\]/i, 'ỉ').replace(/\[o\]/i, 'ỏ').replace(/\[ô\]/i, 'ổ').replace(/\[ơ\]/i, 'ở'),
+							item5: c.replace(/\[a\]/i, 'ã').replace(/\[â\]/i, 'ẫ').replace(/\[ă\]/i, 'ẵ').replace(/\[e\]/i, 'ẽ').replace(/\[ê\]/i, 'ễ').replace(/\[y\]/i, 'ỹ').replace(/\[u\]/i, 'ũ').replace(/\[ư\]/i, 'ữ').replace(/\[i\]/i, 'ĩ').replace(/\[o\]/i, 'õ').replace(/\[ô\]/i, 'ỗ').replace(/\[ơ\]/i, 'ỡ'),
+							item6: c.replace(/\[a\]/i, 'ạ').replace(/\[â\]/i, 'ậ').replace(/\[ă\]/i, 'ặ').replace(/\[e\]/i, 'ẹ').replace(/\[ê\]/i, 'ệ').replace(/\[y\]/i, 'ỵ').replace(/\[u\]/i, 'ụ').replace(/\[ư\]/i, 'ự').replace(/\[i\]/i, 'ị').replace(/\[o\]/i, 'ọ').replace(/\[ô\]/i, 'ộ').replace(/\[ơ\]/i, 'ợ'),
+						};
+					});
 				},
 			},
 		});
