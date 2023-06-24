@@ -16,7 +16,7 @@
 </head>
 
 <body class="py-3">
-	<div class="container">
+	<div class="container" id="app">
 		<div class="row">
 			<div class="col-12">
 				<h1 class="text-center">Rhyme Finder v1.0 - Phát triển bởi JUNO_OKYO</h1>
@@ -26,25 +26,23 @@
 			<div class="col-12">
 				<div class="alert alert-success mt-3" role="alert">
 					<strong>🔥 HOT:</strong> Phiên bản v2.0 với nhiều tính năng hơn (tìm vần đôi, vần đảo, gợi ý tên bài
-					hát,...) đã ra mắt. <a
-						href="https://www.facebook.com/J2TEAM.ManhTuan/posts/pfbid0BvbK3EQ7mzQUGbVQpn4rmVHJ7j3Mf14bReQA7jPpfXseSi8wpfbuNBCSAeEtwJqPl"
+					hát,...) đã ra mắt.
+					<a href="https://www.facebook.com/J2TEAM.ManhTuan/posts/pfbid0BvbK3EQ7mzQUGbVQpn4rmVHJ7j3Mf14bReQA7jPpfXseSi8wpfbuNBCSAeEtwJqPl"
 						class="alert-link" target="_blank" rel="noopener noreferrer nofollow">Sử dụng ngay!!!</a>
 				</div>
 
-				<form action="javascript:void(0);" method="POST" role="form" id="form" class="mt-3">
+				<form @submit.prevent="handleSubmit" class="mt-3">
 					<div class="form-group">
-
 						<div class="input-group mb-3">
-							<input type="text" id="input" class="form-control" placeholder="Ví dụ: [a]nh"
-								pattern="(.+)?\[(.)\](.+)?" required autofocus aria-label="Input"
-								aria-describedby="button-addon">
+							<input type="text" v-model="inputValue" class="form-control" placeholder="Ví dụ: [a]nh"
+								pattern="(.+)?\[(.)\](.+)?" required autofocus>
 							<div class="input-group-append">
-								<button class="btn btn-outline-secondary" type="submit" id="button-addon">ENTER</button>
+								<button class="btn btn-outline-secondary" type="submit">ENTER</button>
 							</div>
 						</div>
 					</div>
 				</form>
-				<table class="table table-bordered table-hover table-striped" id="output">
+				<table class="table table-bordered table-hover table-striped" v-if="showOutput">
 					<thead>
 						<tr class="bg-info">
 							<th>Không dấu</th>
@@ -56,8 +54,13 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td></td>
+						<tr v-for="item in outputItems" :key="item.id">
+							<td>{{ item.item1 }}</td>
+							<td>{{ item.item2 }}</td>
+							<td>{{ item.item3 }}</td>
+							<td>{{ item.item4 }}</td>
+							<td>{{ item.item5 }}</td>
+							<td>{{ item.item6 }}</td>
 						</tr>
 					</tbody>
 				</table>
@@ -66,6 +69,7 @@
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
 	<script src="juno_okyo.js"></script>
 </body>
 
